@@ -1,16 +1,17 @@
 
-import React, { useState } from 'react';
-import DisplayPosts from './Components/DisplayPosts';
-import NavBar from './Components/NavBar';
-import CreatePost from './Components/CreatePost';
+import React, { useState } from "react";
+import DisplayPosts from "./components/DisplayPosts/DisplayPosts";
+import NavBar from "./components/NavBar/NavBar";
+import CreatePost from "./components/CreatePost/CreatePost";
 function App() {
-  const [posts, setPosts] = useState([
-    { name: "Matthew Bshero", comment: "Test post 1" },
-    { name: "Matthew Bshero", comment: "Test post 2" },
+ 
+    const [posts, setPosts] = useState([
+    { name: "William", comment: "Test post 1" },
+    { name: "William", comment: "Test post 2" },
   ]);
 
-  function addNewPost(post){
-    let tempPosts = [...posts, post];
+  function addNewPost(post) {
+    let tempPosts = [post,... posts];
     setPosts(tempPosts);
   }
 

@@ -1,7 +1,5 @@
-import { FaThumbsDown } from 'react-icons/fa';
-import { FaThumbsUp } from 'react-icons/fa';
+
 import React, { useState } from 'react';
-import './Post.css';
 
 const Post = (props) => {
 const [likeactive, setLikeactive] = useState(false);
@@ -37,12 +35,8 @@ function dislikef(){
         <p><small>{today.toUTCString()}</small></p>
         <p><small>{today.toDateString()}</small></p>
         <div className='pull-right'>
-        <button className={[likeactive ? 'btn btn-outline-success btn-lg': 'btn btn-lg' ].join('')} onClick={likef}>
-        <FaThumbsUp />
-        </button>
-        <button className={[dislikeactive ? 'btn btn-outline-danger btn-lg': 'btn btn-lg' ].join('')} onClick={dislikef} >
-        <FaThumbsDown />
-        </button>
+       
+ 
         </div>
       </div>
     </td>
