@@ -35,10 +35,10 @@ function dislikef(){
       <p className="col">{props.post.comment}</p>
       <div>
       <button className={[likeactive ? 'like': null, '' ].join('')} onClick={likef} >
-
+LIKE
       </button>
       <button className={[dislikeactive ? 'dislike': null, '' ].join('')} onClick={dislikef}>
-  
+  DISLIKE
       </button>
       </div>
     </div>
