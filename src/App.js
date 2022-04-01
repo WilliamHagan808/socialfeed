@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DisplayPosts from "./components/DisplayPosts/DisplayPosts";
 import NavBar from "./components/NavBar/NavBar";
 import CreatePost from "./components/CreatePost/CreatePost";
+import "./App.css";
 function App() {
  
     const [posts, setPosts] = useState([
@@ -16,14 +17,27 @@ function App() {
   }
 
   return (
-    <div>
-      <NavBar />
-      <main>
-      <CreatePost />
-      <CreatePost addNewPostProp={addNewPost}/>
-      <DisplayPosts post={posts}/>
-      </main>
-    </div>
-  );
-}
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-6 mx-auto">
+          <div className="border-nav">
+            <NavBar />
+          </div>
+        </div>
+      </div>
+      <main>  
+        <div className="row">
+          <div className="col-md-6 mx-auto">
+            <div className="border-box">
+              <CreatePost addNewPostProp={addNewPost} />
+            </div>
+            <div className="border-box">
+              <DisplayPosts post={posts} />
+            </div>
+          </div>
+          </div>
+          </main>
+        </div>
+        );
+        }
 export default App;

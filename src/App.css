@@ -1,0 +1,15 @@
+.border-box{
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 5px 10px;
+}
+
+.border-nav{
+    border: 1px;
+    border-style:hidden;
+    padding: 1em;
+}

@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import './Post.css'
 
 const Post = (props) => {
 const [likeactive, setLikeactive] = useState(false);
@@ -29,18 +30,20 @@ function dislikef(){
 
   return (
     <td>
+    <div>
+      <h3 className="col">{props.post.name}</h3>
+      <p className="col">{props.post.comment}</p>
       <div>
-        <h3 className="col">{props.post.name}</h3>
-        <p className="col">{props.post.comment}</p>
-        <p><small>{today.toUTCString()}</small></p>
-        <p><small>{today.toDateString()}</small></p>
-        <div className='pull-right'>
-       
- 
-        </div>
+      <button className={[likeactive ? 'like': null, '' ].join('')} onClick={likef} >
+
+      </button>
+      <button className={[dislikeactive ? 'dislike': null, '' ].join('')} onClick={dislikef}>
+  
+      </button>
       </div>
-    </td>
-  );
+    </div>
+  </td>
+);
 };
 
 export default Post;
